@@ -17,7 +17,8 @@ def image_sorter(path_name):
                 except:
                     print(f"Cannot Convert {file_name_full}")
                     continue
-                file_full = os.path.join(year, month)
+                file_full = os.path.join(path_name, year, month)
+                print(file_full)
                 if not os.path.exists(file_full):
                     print("create")
                     os.makedirs(file_full)
