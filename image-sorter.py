@@ -1,5 +1,6 @@
 from PIL import Image
 import os
+import argparse
 
 
 def image_sorter(path_name):
@@ -24,4 +25,8 @@ def image_sorter(path_name):
 
 
 if __name__ == '__main__':
-    image_sorter("12_anos")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("-p", "--path", required=True,
+                    help="Folder Path")
+    args = vars(ap.parse_args())
+    image_sorter(args['path'])
