@@ -18,9 +18,7 @@ def image_sorter(path_name):
                     print(f"Cannot Convert {file_name_full}")
                     continue
                 file_full = os.path.join(path_name, year, month)
-                print(file_full)
                 if not os.path.exists(file_full):
-                    print("create")
                     os.makedirs(file_full)
                 os.rename(file_name_full, os.path.join(file_full, name))
 
@@ -31,3 +29,4 @@ if __name__ == '__main__':
                     help="Folder Path")
     args = vars(ap.parse_args())
     image_sorter(args['path'])
+    print("Process Complete")
