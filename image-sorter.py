@@ -6,7 +6,7 @@ import argparse
 def image_sorter(path_name):
     for path, subdirs, files in os.walk(path_name):
         for name in files:
-            if ".jpg" in name or ".png" in name or ".PNG" in name or ".JPG" in name or ".JPEG" in name or ".jpeg":
+            if ".jpg" in name or ".png" in name or ".PNG" in name or ".JPG" in name or ".JPEG" in name or ".jpeg" in name:
                 file_name_full = os.path.join(path, name)
                 if not os.path.isfile(file_name_full):
                     continue
